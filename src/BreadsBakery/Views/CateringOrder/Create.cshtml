@@ -1,0 +1,58 @@
+﻿@model  BreadsBakery.Models.CateringOrder
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Place an order</h3>
+@using (Html.BeginForm())
+{
+    <div>
+    <label>Date of Event:</label>
+  
+    @Html.EditorFor(model => model.DateNeeded, new { @type = "date", @class = "form-control" })
+    </div>
+
+    <div>
+    <label>Time:</label>
+
+    @Html.TextBoxFor(model => model.Time)
+    </div>
+
+    <div>
+    <label> Todays Date:</label>
+    @Html.TextBoxFor(model => model.DateTaken)
+    </div>
+
+    <div>
+    <label>Address</label>
+    @Html.TextBoxFor(model => model.Address)
+    </div>
+
+    <div>
+    <label> Delivery?</label>
+   <p>Yes @Html.RadioButtonFor(model => model.Delivery, "Yes")</p>
+   <p>No @Html.RadioButtonFor(model => model.Delivery, "No")</p>
+    </div>
+
+    <div>
+    <label>Price</label>
+    @Html.TextBoxFor(model => model.Price)
+    </div>
+
+    <div>
+    <label>Number of people:</label>
+    @Html.TextBoxFor(model => model.ServingRange)
+    </div>
+
+    <div>
+
+    <label>Cash or Card</label>
+    @Html.RadioButtonFor(model => model.Delivery, "Cash", "Cash")
+    @Html.RadioButtonFor(model => model.Delivery, "Card", "Card")
+    </div>
+
+
+    <input type="submit" value="Place Order" />
+}

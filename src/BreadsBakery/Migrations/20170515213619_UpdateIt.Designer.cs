@@ -8,9 +8,10 @@ using BreadsBakery.Models;
 namespace BreadsBakery.Migrations
 {
     [DbContext(typeof(BreadsBakeryDbContext))]
-    partial class BreadsBakeryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170515213619_UpdateIt")]
+    partial class UpdateIt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

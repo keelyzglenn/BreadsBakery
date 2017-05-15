@@ -15,7 +15,10 @@ namespace BreadsBakery.Models
 
         [Key]
         public int CateringOrderId { get; set; }
-        public string DateNeeded { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DateNeeded { get; set; }
         public string DateTaken { get; set; }
         public string Address { get; set; }
         public string Time { get; set; }
