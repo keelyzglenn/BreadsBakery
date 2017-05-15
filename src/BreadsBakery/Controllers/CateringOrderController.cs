@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BreadsBakery.Models;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BreadsBakery.Controllers
 {
@@ -19,7 +19,7 @@ namespace BreadsBakery.Controllers
         public IActionResult Create()
         {
             //ViewBag.PostId = new SelectList(_db.Posts, "Id", "Description");
-            //ViewBag.TagId = new SelectList(_db.Tags, "TagId", "Name");
+            ViewBag.UserId = new SelectList(db.Users, "UserId", "FirstName");
             return View();
         }
 
@@ -28,7 +28,7 @@ namespace BreadsBakery.Controllers
         {
             db.CateringOrders.Add(cateringOrder);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
     }

@@ -49,9 +49,12 @@
     <div>
 
     <label>Cash or Card</label>
-    @Html.RadioButtonFor(model => model.Delivery, "Cash", "Cash")
-    @Html.RadioButtonFor(model => model.Delivery, "Card", "Card")
+    @Html.RadioButtonFor(model => model.PaymentMethod, "Cash", "Cash")
+    @Html.RadioButtonFor(model => model.PaymentMethod, "Card", "Card")
     </div>
+
+    <label>User</label>
+    @Html.DropDownList("UserId")
 
 
     <input type="submit" value="Place Order" />
