@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BreadsBakery.Models;
 
-namespace Portfolio.Models
+namespace BreadsBakery.Models
 {
-    public class PortfolioDbContext : DbContext
+    public class BreadsBakeryDbContext : DbContext
     {
         public virtual DbSet<StoreProduct> StoreProducts { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
@@ -17,15 +17,15 @@ namespace Portfolio.Models
 
         public virtual DbSet<Order> Orders { get; set; }
 
-        public PortfolioDbContext()
-        {
-        }
+        public virtual DbSet<User> Users { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BreadsBakery;integrated security=True");
         }
 
-        public PortfolioDbContext(DbContextOptions<PortfolioDbContext> options)
+        public BreadsBakeryDbContext(DbContextOptions<BreadsBakeryDbContext> options)
                 : base(options)
         {
         }

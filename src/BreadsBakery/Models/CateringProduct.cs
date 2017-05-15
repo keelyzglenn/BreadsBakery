@@ -20,15 +20,15 @@ namespace BreadsBakery.Models
         public string ImageUrl { get; set; }
         public int Price { get; set; }
         
-        public int ServingSize { get; set; }
+        public string ServingSize { get; set; }
 
-        public int Quantity { get; set; }
-        public int Category { get; set; }
+        public string Category { get; set; }
 
         public int DepartmentId { get; set; }
         public virtual Department Department { get; set; }
 
         public virtual ICollection<Order> Order { get; set; }
+
 
     }
 }
