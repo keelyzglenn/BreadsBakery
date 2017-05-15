@@ -2,3 +2,43 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model IEnumerable<BreadsBakery.Models.StoreProduct>
+
+
+<h2>Soups</h2>
+
+@foreach (var product in Model)
+{
+
+    @if (product.Category == "Soup")
+    {
+        <div>
+            <p>@product.Name</p>
+            <p>@product.Description</p>
+            <p>@product.Price</p>
+            <p>@product.ImageUrl</p>
+
+        </div>
+    }
+
+}
+
+
+<h2>Sandwiches</h2>
+
+@foreach (var product in Model)
+{
+
+    @if (product.Category == "Bread")
+    {
+        <div>
+            <p>@product.Name</p>
+            <p>@product.Description</p>
+            <p>@product.Price</p>
+            <p>@product.ImageUrl</p>
+
+        </div>
+    }
+
+}

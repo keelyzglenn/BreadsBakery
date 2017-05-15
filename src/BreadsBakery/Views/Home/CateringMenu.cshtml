@@ -3,42 +3,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model IEnumerable<BreadsBakery.Models.StoreProduct>
+@model IEnumerable<BreadsBakery.Models.CateringProduct>
 
 
-<h1>Products</h1>
+<h1>Catering Menu</h1>
 
-<h2>Pastries</h2>
 
-<h3>Sweet</h3>
+<h3>Breakfast</h3>
 @foreach (var product in Model)
 {
-    
-    @if (product.Category == "SweetPastry")
+
+    @if (product.Category == "Breakfast")
     {
         <div>
             <p>@product.Name</p>
             <p>@product.Description</p>
             <p>@product.Price</p>
             <p>@product.ImageUrl</p>
-
-        </div>
-    }
-
-}
-
-<h3>Savory</h3>
-
-@foreach (var product in Model)
-{
-
-    @if (product.Category == "SavoryPastry")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+            <p>@product.ServingSize</p>
 
         </div>
     }
@@ -46,18 +28,18 @@
 }
 
 
-<h2>Cakes</h2>
-
+<h3>Lunch</h3>
 @foreach (var product in Model)
 {
 
-    @if (product.Category == "Cake")
+    @if (product.Category == "Lunch")
     {
         <div>
             <p>@product.Name</p>
             <p>@product.Description</p>
             <p>@product.Price</p>
             <p>@product.ImageUrl</p>
+            <p>@product.ServingSize</p>
 
         </div>
     }
@@ -65,18 +47,37 @@
 }
 
 
-<h2>Breads</h2>
-
+<h3>Appetizers</h3>
 @foreach (var product in Model)
 {
 
-    @if (product.Category == "Bread")
+    @if (product.Category == "Appetizers")
     {
         <div>
             <p>@product.Name</p>
             <p>@product.Description</p>
             <p>@product.Price</p>
             <p>@product.ImageUrl</p>
+            <p>@product.ServingSize</p>
+
+        </div>
+    }
+
+}
+
+
+<h3>Desserts</h3>
+@foreach (var product in Model)
+{
+
+    @if (product.Category == "Desserts")
+    {
+        <div>
+            <p>@product.Name</p>
+            <p>@product.Description</p>
+            <p>@product.Price</p>
+            <p>@product.ImageUrl</p>
+            <p>@product.ServingSize</p>
 
         </div>
     }

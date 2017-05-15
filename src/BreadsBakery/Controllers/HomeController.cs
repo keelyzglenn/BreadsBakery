@@ -25,12 +25,12 @@ namespace BreadsBakery.Controllers
 
         public IActionResult Pastries()
         {
-            return View();
+            return View(db.StoreProducts.ToList());
         }
 
         public IActionResult Menu()
         {
-            return View();
+            return View(db.StoreProducts.ToList());
         }
 
         public IActionResult About()
@@ -46,6 +46,11 @@ namespace BreadsBakery.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+
+        public IActionResult CateringMenu()
+        {
+            return View(db.CateringProducts.ToList());
         }
 
     }
