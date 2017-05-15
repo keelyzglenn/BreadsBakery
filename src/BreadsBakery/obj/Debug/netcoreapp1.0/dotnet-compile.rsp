@@ -211,6 +211,7 @@
 --resource:"c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\obj\Debug\netcoreapp1.0\BreadsBakerydotnet-compile.deps.json",BreadsBakery.deps.json
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Program.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Startup.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515173943_Initial.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515173943_Initial.Designer.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515182253_Prepopulate.cs

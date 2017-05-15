@@ -25,6 +25,10 @@ namespace BreadsBakery.Models
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BreadsBakery;integrated security=True");
         }
 
+        public BreadsBakeryDbContext()
+        {
+        }
+
         public BreadsBakeryDbContext(DbContextOptions<BreadsBakeryDbContext> options)
                 : base(options)
         {

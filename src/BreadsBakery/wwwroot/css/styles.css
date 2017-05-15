@@ -1,0 +1,21 @@
+﻿@media screen and (min-width:768px){
+    .navbar{
+        background-color: white;
+    }
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+        background-color: white;
+    }
+    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -100px;
+    }
+
+    #nav-logo{
+        height: 100px;
+    }
+}
