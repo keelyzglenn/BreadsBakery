@@ -8,78 +8,121 @@
 
 <h1>Catering Menu</h1>
 
+<br />
+<h3 class="catering-menu-title">Breakfast</h3>
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-<h3>Breakfast</h3>
-@foreach (var product in Model)
-{
+            @if (product.Category == "Breakfast")
+            {
 
-    @if (product.Category == "Breakfast")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
-            <p>@product.ServingSize</p>
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h4>@product.Name -       @product.ServingSize</h4>
+                        <h5>@product.Description</h5>
 
-        </div>
-    }
+                        <h4 class="pi-price"> $@product.Price</h4>
+                    </div>
+                </div>
 
-}
+            }
 
+        }
 
-<h3>Lunch</h3>
-@foreach (var product in Model)
-{
+    </div>
+</div>
 
-    @if (product.Category == "Lunch")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
-            <p>@product.ServingSize</p>
+<br />
+<h3 class="catering-menu-title">Lunch</h3>
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-        </div>
-    }
+            @if (product.Category == "Lunch")
+            {
 
-}
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h4>@product.Name -       @product.ServingSize</h4>
+                        <h5>@product.Description</h5>
 
+                        <h4 class="pi-price"> $@product.Price</h4>
+                    </div>
+                </div>
 
-<h3>Appetizers</h3>
-@foreach (var product in Model)
-{
+            }
 
-    @if (product.Category == "Appetizers")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
-            <p>@product.ServingSize</p>
+        }
 
-        </div>
-    }
+    </div>
+</div>
+<br />
+<h3 class="catering-menu-title">Appetizers</h3>
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-}
+            @if (product.Category == "Appetizers")
+            {
 
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h4>@product.Name -       @product.ServingSize</h4>
+                        <h5>@product.Description</h5>
 
-<h3>Desserts</h3>
-@foreach (var product in Model)
-{
+                        <h4 class="pi-price"> $@product.Price</h4>
+                    </div>
+                </div>
 
-    @if (product.Category == "Desserts")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
-            <p>@product.ServingSize</p>
+            }
 
-        </div>
-    }
+        }
 
-}
+    </div>
+</div>
+
+<br />
+<h3 class="catering-menu-title">Desserts</h3>
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+
+            @if (product.Category == "Desserts")
+            {
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h4>@product.Name -       @product.ServingSize</h4>
+                        <h5>@product.Description</h5>
+                        
+                        <h4 class="pi-price"> $@product.Price</h4>
+                    </div>
+                </div>
+
+            }
+
+        }
+
+    </div>
+</div>

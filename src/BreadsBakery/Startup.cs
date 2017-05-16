@@ -88,7 +88,7 @@ namespace BreadsBakery
             var storeProduct1 = new StoreProduct();
             storeProduct1.Name = "Cheese Straws";
             storeProduct1.Description = "A puff pastery stick with three different cheeses.";
-            storeProduct1.ImageUrl = "Kitchen";
+            storeProduct1.ImageUrl = "https://static.wixstatic.com/media/a4b210_16b0e50349434afc959eb3d8596e10c0~mv2.jpg";
             storeProduct1.Price = 1;
             storeProduct1.Category = "SavoryPastry";
             storeProduct1.DepartmentId = department3.DepartmentId;
@@ -97,34 +97,52 @@ namespace BreadsBakery
             var storeProduct2 = new StoreProduct();
             storeProduct2.Name = "Chocolate Babka";
             storeProduct2.Description = "Chocolate Babka is a sweet, swirly, brioche-meets-cake loaf rooted in Eastern European Jewish traditions.";
-            storeProduct2.ImageUrl = "Kitchen";
+            storeProduct2.ImageUrl = "https://static.wixstatic.com/media/a4b210_44fea4167e5ed867bd1fbf93b82cd839.jpg";
             storeProduct2.Price = 12;
             storeProduct2.Category = "SweetPastry";
             storeProduct2.DepartmentId = department3.DepartmentId;
             context.StoreProducts.Add(storeProduct2);
 
             var storeProduct3 = new StoreProduct();
-            storeProduct3.Name = "Passion Fruit Concord Cake ";
-            storeProduct3.Description = "Passion Fruit Concord Cake";
-            storeProduct3.ImageUrl = "https://www.instagram.com/p/BStoJbylkx8/?hl=en";
-            storeProduct3.Price = 20;
-            storeProduct3.Category = "Cake";
-            storeProduct3.DepartmentId = department2.DepartmentId;
+            storeProduct3.Name = "Almond Croissant";
+            storeProduct3.Description = "An almond croissant that is filled with marzipan imported from germany";
+            storeProduct3.ImageUrl = "https://static.wixstatic.com/media/a4b210_5a3eb6d56d358fe1677beea613608df2.jpg";
+            storeProduct3.Price = 4;
+            storeProduct3.Category = "SweetPastry";
+            storeProduct3.DepartmentId = department3.DepartmentId;
             context.StoreProducts.Add(storeProduct3);
 
             var storeProduct4 = new StoreProduct();
-            storeProduct4.Name = "Matzo Soup";
-            storeProduct4.Description = "Matzah balls are an Ashkenazi Jewish soup dumpling made from a mixture of matzah meal, eggs, water, and a fat, such as oil, margarine, or chicken fat. Matzah balls are traditionally served in chicken soup.";
-            storeProduct4.ImageUrl = "https://www.instagram.com/p/BSeceYSlem5/?taken-by=breadsbakery&hl=en";
+            storeProduct4.Name = "Rugelach";
+            storeProduct4.Description = "Chocolate nutella rolled in croissant dough";
+            storeProduct4.ImageUrl = "https://static.wixstatic.com/media/a4b210_b38fd8802fac090debde5cc713db6d05.jpg";
             storeProduct4.Price = 4;
-            storeProduct4.Category = "Soup";
-            storeProduct4.DepartmentId = department1.DepartmentId;
+            storeProduct4.Category = "SweetPastry";
+            storeProduct4.DepartmentId = department3.DepartmentId;
             context.StoreProducts.Add(storeProduct4);
+
+            var storeProduct6 = new StoreProduct();
+            storeProduct6.Name = "Passion Fruit Concord Cake ";
+            storeProduct6.Description = "Passion Fruit Concord Cake";
+            storeProduct6.ImageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/17818516_1666215223683066_6781984498344001536_n.jpg";
+            storeProduct6.Price = 20;
+            storeProduct6.Category = "Cake";
+            storeProduct6.DepartmentId = department2.DepartmentId;
+            context.StoreProducts.Add(storeProduct6);
+
+            var storeProduct7 = new StoreProduct();
+            storeProduct7.Name = "Matzo Soup";
+            storeProduct7.Description = "Matzah balls are an Ashkenazi Jewish soup dumpling made from a mixture of matzah meal, eggs, water, and a fat, such as oil, margarine, or chicken fat. Matzah balls are traditionally served in chicken soup.";
+            storeProduct7.ImageUrl = "https://i0.wp.com/farm3.static.flickr.com/2420/2240152649_9a35850105_z.jpg";
+            storeProduct7.Price = 4;
+            storeProduct7.Category = "Soup";
+            storeProduct7.DepartmentId = department1.DepartmentId;
+            context.StoreProducts.Add(storeProduct7);
 
             var storeProduct5 = new StoreProduct();
             storeProduct5.Name = "Foccacia";
             storeProduct5.Description = "Focaccia is a flat oven-baked Italian bread product similar in style and texture to pizza doughs. It may be topped with herbs or other ingredients";
-            storeProduct5.ImageUrl = "https://www.instagram.com/p/BSJrRMmgJqD/?taken-by=breadsbakery&hl=en";
+            storeProduct5.ImageUrl = "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.93.1080.1080/17586842_727955184031581_6854760202323886080_n.jpg";
             storeProduct5.Price = 4;
             storeProduct5.Category = "Bread";
             storeProduct5.DepartmentId = department4.DepartmentId;

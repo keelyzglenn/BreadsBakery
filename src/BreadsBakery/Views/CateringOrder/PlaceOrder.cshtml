@@ -26,9 +26,18 @@
 
     @Html.HiddenFor(model => model.CateringOrderId)
 
-    @*<input type="hidden" name="CateringOrderId" value="(model => model.CateringOrderId)">*@
-
      <label>Product</label>
+    @Html.DropDownList("CateringProductId")
+
+    <label>Quantity</label>
+    <input type="text" name="Quantity" />
+
+
+
+    @Html.HiddenFor(model => model.CateringOrderId)
+
+
+    <label>Product</label>
     @Html.DropDownList("CateringProductId")
 
     <label>Quantity</label>

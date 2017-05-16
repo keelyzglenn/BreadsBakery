@@ -6,39 +6,61 @@
 @model IEnumerable<BreadsBakery.Models.StoreProduct>
 
 
-<h2>Soups</h2>
+<h2 class="catering-menu-title">Soups</h2>
 
-@foreach (var product in Model)
-{
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-    @if (product.Category == "Soup")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+            @if (product.Category == "Soup")
+            {
 
-        </div>
-    }
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
 
-}
+                    </div>
+                </div>
+
+            }
+
+        }
+
+    </div>
+</div>
 
 
-<h2>Sandwiches</h2>
+<h2 class="catering-menu-title">Sandwiches</h2>
 
-@foreach (var product in Model)
-{
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-    @if (product.Category == "Bread")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+            @if (product.Category == "Bread")
+            {
 
-        </div>
-    }
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
 
-}
+                    </div>
+                </div>
+
+            }
+
+        }
+
+    </div>
+</div>

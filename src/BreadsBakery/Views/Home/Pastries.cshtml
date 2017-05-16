@@ -10,75 +10,146 @@
 
 <h2>Pastries</h2>
 
-<h3>Sweet</h3>
-@foreach (var product in Model)
-{
-    
-    @if (product.Category == "SweetPastry")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+<h3 class="catering-menu-title">Sweet</h3>
+<div class="container">
+    <div class="row">
 
-        </div>
-    }
+        @foreach (var product in Model)
+        {
 
-}
-
-<h3>Savory</h3>
-
-@foreach (var product in Model)
-{
-
-    @if (product.Category == "SavoryPastry")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
-
-        </div>
-    }
-
-}
+            @if (product.Category == "SweetPastry")
+            {
 
 
-<h2>Cakes</h2>
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
+                       
+                    </div>
+                </div>
+            }
 
-@foreach (var product in Model)
-{
+        }
+    </div>
+</div>
 
-    @if (product.Category == "Cake")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+<h3 class="catering-menu-title">Savory</h3>
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
 
-        </div>
-    }
+            @if (product.Category == "SavoryPastry")
+            {
 
-}
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
+                       
+                    </div>
+                </div>
+
+            }
+
+        }
+    </div>
+</div>
+
+<h2 class="catering-menu-title">Cakes</h2>
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+
+            @if (product.Category == "Cake")
+            {
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
+                       
+                    </div>
+                </div>
+
+            }
+
+        }
+
+    </div>
+</div>
 
 
-<h2>Breads</h2>
+<h2 class="catering-menu-title">Breads</h2>
+<div class="container">
+    <div class="row">
+        <br />
+        <h3 class="catering-menu-title">Bread Of The Day</h3>
+   
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oatmeal Walnut</td>
+                    <td>Cereal Batard</td>
+                    <td>Fig and Walnut</td>
+                    <td>Herb Bread</td>
+                    <td>Cranberry Challah</td>
+                    <td>Marzipan Challah</td>
+                    <td>Seeded Batard</td>
+                </tr>
+           
+            </tbody>
+        </table>
 
-@foreach (var product in Model)
-{
+    </div>
+    <div class="row">
+        @foreach (var product in Model)
+            {
 
-    @if (product.Category == "Bread")
-    {
-        <div>
-            <p>@product.Name</p>
-            <p>@product.Description</p>
-            <p>@product.Price</p>
-            <p>@product.ImageUrl</p>
+            @if (product.Category == "Bread")
+                {
 
-        </div>
-    }
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <div class="pi-img-wrapper">
+                            <img src="@product.ImageUrl" class="img-responsive">
+                        </div>
+                        <h3>@product.Name</h3>
+                        <h5>@product.Description</h5>
+                        <div class="pi-price">$@product.Price</div>
+                       
+                    </div>
+                </div>
 
-}
+            }
+
+        }
+    </div>
+</div>
+
+
