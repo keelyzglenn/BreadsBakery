@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BreadsBakery.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace BreadsBakery.Controllers
 {
@@ -13,7 +14,12 @@ namespace BreadsBakery.Controllers
         private BreadsBakeryDbContext db = new BreadsBakeryDbContext();
         public IActionResult Index()
         {
-            return View();
+            return View(db.CateringOrders.ToList());
+        }
+
+        public IActionResult CateringMenu()
+        {
+            return View(db.CateringProducts.ToList());
         }
 
         public IActionResult Create()
@@ -28,31 +34,39 @@ namespace BreadsBakery.Controllers
         {
             db.CateringOrders.Add(cateringOrder);
             db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult PlaceOrder(int id)
+        {
+            var thisProduct = db.CateringOrders.FirstOrDefault(products => products.CateringOrderId == id);
+            return View(thisProduct);
         }
 
 
-        public IActionResult PlaceOrder()
-        {
+        //public IActionResult PlaceOrder(int id)
+        //{
             //ViewBag.thisOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
+            //ViewBag.List = db.CateringProducts.ToList();
+            //ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
 
-            ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
+            //var thisCateringOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
 
-            ViewBag.List = db.CateringProducts.ToList();
+            //ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
+        //    return View(thisCateringOrder);
 
-            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
-            return View();
-        }
+        //}
 
-        [HttpPost]
-        public IActionResult PlaceOrder(Order order)
-        {
-            order.CateringProductId = order.CateringProductId;
-            db.Orders.Add(order);
- 
-            db.SaveChanges();
-            return RedirectToAction("Index", "Home");
-        }
+        //[HttpPost]
+        //public IActionResult PlaceOrder(Order order)
+        //{
+
+        //    db.Orders.Add(order);
+
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index", "Home");
+        //}
+
 
     }
 }

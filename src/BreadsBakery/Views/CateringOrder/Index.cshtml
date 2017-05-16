@@ -11,9 +11,22 @@
 @foreach (var order in Model)
 {
 
-            <p>
-                @Html.ActionLink((string)@order.Address, "PlaceOrder", "PlaceOrder", new { id = @order.CateringOrderId })
+    <p>
+        @Html.ActionLink((string)@order.Address, "PlaceOrder", "CateringOrder", new { id = @order.CateringOrderId })
     </p>
 
 
 }
+
+
+@*@foreach (var product in Model)
+{
+
+        <div>
+            <p>@product.Address</p>
+ 
+
+        </div>
+   
+
+}*@

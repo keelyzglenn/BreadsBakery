@@ -48,10 +48,7 @@ namespace BreadsBakery.Controllers
             return View();
         }
 
-        public IActionResult CateringMenu()
-        {
-            return View(db.CateringProducts.ToList());
-        }
+   
 
     }
 }

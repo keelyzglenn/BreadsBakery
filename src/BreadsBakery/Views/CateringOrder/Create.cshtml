@@ -9,48 +9,48 @@
 @using (Html.BeginForm())
 {
     <div>
-    <label>Date of Event:</label>
-  
-    @Html.EditorFor(model => model.DateNeeded, new { @type = "date", @class = "form-control" })
+        <label>Date of Event:</label>
+
+        @Html.EditorFor(model => model.DateNeeded, new { @type = "date", @class = "form-control" })
     </div>
 
     <div>
-    <label>Time:</label>
+        <label>Time:</label>
 
-    @Html.TextBoxFor(model => model.Time)
+        @Html.TextBoxFor(model => model.Time)
     </div>
 
     <div>
-    <label> Todays Date:</label>
-    @Html.TextBoxFor(model => model.DateTaken)
+        <label> Todays Date:</label>
+        @Html.TextBoxFor(model => model.DateTaken)
     </div>
 
     <div>
-    <label>Address</label>
-    @Html.TextBoxFor(model => model.Address)
+        <label>Address</label>
+        @Html.TextBoxFor(model => model.Address)
     </div>
 
     <div>
-    <label> Delivery?</label>
-   <p>Yes @Html.RadioButtonFor(model => model.Delivery, "Yes")</p>
-   <p>No @Html.RadioButtonFor(model => model.Delivery, "No")</p>
+        <label> Delivery?</label>
+        <p>Yes @Html.RadioButtonFor(model => model.Delivery, "Yes")</p>
+        <p>No @Html.RadioButtonFor(model => model.Delivery, "No")</p>
     </div>
 
     <div>
-    <label>Price</label>
-    @Html.TextBoxFor(model => model.Price)
+        <label>Price</label>
+        @Html.TextBoxFor(model => model.Price)
     </div>
 
     <div>
-    <label>Number of people:</label>
-    @Html.TextBoxFor(model => model.ServingRange)
+        <label>Number of people:</label>
+        @Html.TextBoxFor(model => model.ServingRange)
     </div>
 
     <div>
 
-    <label>Cash or Card</label>
-    @Html.RadioButtonFor(model => model.PaymentMethod, "Cash", "Cash")
-    @Html.RadioButtonFor(model => model.PaymentMethod, "Card", "Card")
+        <label>Cash or Card</label>
+        @Html.RadioButtonFor(model => model.PaymentMethod, "Cash", "Cash")
+        @Html.RadioButtonFor(model => model.PaymentMethod, "Card", "Card")
     </div>
 
     <label>User</label>
