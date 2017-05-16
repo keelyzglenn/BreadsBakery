@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<BreadsBakery.Models.CateringOrder>
+
+
+<h1>Orders</h1>
+
+@foreach (var order in Model)
+{
+
+            <p>
+                @Html.ActionLink((string)@order.Address, "PlaceOrder", "PlaceOrder", new { id = @order.CateringOrderId })
+    </p>
+
+
+}

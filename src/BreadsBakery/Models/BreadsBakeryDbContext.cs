@@ -36,8 +36,8 @@ namespace BreadsBakery.Models
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Order>()
-                .HasKey(t => new { t.CateringProductId, t.CateringOrderId });
+            //builder.Entity<Order>()
+            //    .HasKey(t => new { t.CateringProductId, t.CateringOrderId });
 
 
             base.OnModelCreating(builder);

@@ -86,17 +86,18 @@ namespace BreadsBakery.Migrations
 
             modelBuilder.Entity("BreadsBakery.Models.Order", b =>
                 {
-                    b.Property<int>("CateringProductId");
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("CateringOrderId");
 
-                    b.Property<int?>("CateringOrderId1");
+                    b.Property<int>("CateringProductId");
 
                     b.Property<int>("Quantity");
 
-                    b.HasKey("CateringProductId", "CateringOrderId");
+                    b.HasKey("OrderId");
 
-                    b.HasIndex("CateringOrderId1");
+                    b.HasIndex("CateringOrderId");
 
                     b.HasIndex("CateringProductId");
 
@@ -163,7 +164,8 @@ namespace BreadsBakery.Migrations
                 {
                     b.HasOne("BreadsBakery.Models.CateringOrder", "CateringOrder")
                         .WithMany("Order")
-                        .HasForeignKey("CateringOrderId1");
+                        .HasForeignKey("CateringOrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BreadsBakery.Models.CateringProduct", "CateringProduct")
                         .WithMany("Order")

@@ -31,5 +31,28 @@ namespace BreadsBakery.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
+        public IActionResult PlaceOrder()
+        {
+            //ViewBag.thisOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
+
+            ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
+
+            ViewBag.List = db.CateringProducts.ToList();
+
+            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult PlaceOrder(Order order)
+        {
+            order.CateringProductId = order.CateringProductId;
+            db.Orders.Add(order);
+ 
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

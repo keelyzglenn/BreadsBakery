@@ -29,7 +29,8 @@ namespace BreadsBakery.Migrations
                     UserId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CompanyName = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,14 +43,13 @@ namespace BreadsBakery.Migrations
                 {
                     CateringProductId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Category = table.Column<int>(nullable: false),
+                    Category = table.Column<string>(nullable: true),
                     DepartmentId = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     ImageUrl = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false),
-                    Quantity = table.Column<int>(nullable: false),
-                    ServingSize = table.Column<int>(nullable: false)
+                    ServingSize = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -93,7 +93,7 @@ namespace BreadsBakery.Migrations
                     CateringOrderId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Address = table.Column<string>(nullable: true),
-                    DateNeeded = table.Column<string>(nullable: true),
+                    DateNeeded = table.Column<DateTime>(nullable: false),
                     DateTaken = table.Column<string>(nullable: true),
                     Delivery = table.Column<string>(nullable: true),
                     PaymentMethod = table.Column<string>(nullable: true),
@@ -117,20 +117,21 @@ namespace BreadsBakery.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    CateringProductId = table.Column<int>(nullable: false),
+                    OrderId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CateringOrderId = table.Column<int>(nullable: false),
-                    CateringOrderId1 = table.Column<int>(nullable: true),
+                    CateringProductId = table.Column<int>(nullable: false),
                     Quantity = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => new { x.CateringProductId, x.CateringOrderId });
+                    table.PrimaryKey("PK_Orders", x => x.OrderId);
                     table.ForeignKey(
-                        name: "FK_Orders_CateringOrders_CateringOrderId1",
-                        column: x => x.CateringOrderId1,
+                        name: "FK_Orders_CateringOrders_CateringOrderId",
+                        column: x => x.CateringOrderId,
                         principalTable: "CateringOrders",
                         principalColumn: "CateringOrderId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Orders_CateringProducts_CateringProductId",
                         column: x => x.CateringProductId,
@@ -150,9 +151,9 @@ namespace BreadsBakery.Migrations
                 column: "DepartmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_CateringOrderId1",
+                name: "IX_Orders_CateringOrderId",
                 table: "Orders",
-                column: "CateringOrderId1");
+                column: "CateringOrderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_CateringProductId",

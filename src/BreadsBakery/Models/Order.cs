@@ -11,6 +11,7 @@ namespace BreadsBakery.Models
     public class Order
     {
         [Key]
+        public int OrderId { get; set; }
         public int CateringOrderId { get; set; }
         public virtual CateringOrder CateringOrder { get; set; }
 

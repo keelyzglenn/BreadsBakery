@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model BreadsBakery.Models.Order
+
+<h3>Place an order</h3>
+@using (Html.BeginForm())
+{
+
+    @foreach (var product in ViewBag.List)
+    {
+
+    
+        {
+            <div>
+                <p>@product.Name</p>
+                @*@Html.HiddenFor(new int { model => model.CateringProduct}, product.CateringProductId)*@
+                @*<p> @Html.RadioButtonFor(model => model.CateringProductId, "product.CateringProductId")</p>*@
+               
+            </div>
+        }
+
+    }
+
+    @*@Html.HiddenFor(model.CateringOrderId => ViewBag.thisOrder)
+    @Html.HiddenFor(model => model.CateringOrderId)*@
+
+
+
+    <label>Order</label>
+    @Html.DropDownList("CateringOrderId")
+
+    <label>Tag</label>
+    @Html.DropDownList("CateringProductId")
+
+    <input type="submit" value="Place Order" />
+}

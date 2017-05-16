@@ -8,7 +8,7 @@ using BreadsBakery.Models;
 namespace BreadsBakery.Migrations
 {
     [DbContext(typeof(BreadsBakeryDbContext))]
-    [Migration("20170515173943_Initial")]
+    [Migration("20170515223511_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace BreadsBakery.Migrations
 
                     b.Property<string>("Address");
 
-                    b.Property<string>("DateNeeded");
+                    b.Property<DateTime>("DateNeeded");
 
                     b.Property<string>("DateTaken");
 
@@ -52,7 +52,7 @@ namespace BreadsBakery.Migrations
                     b.Property<int>("CateringProductId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Category");
+                    b.Property<string>("Category");
 
                     b.Property<int>("DepartmentId");
 
@@ -64,9 +64,7 @@ namespace BreadsBakery.Migrations
 
                     b.Property<int>("Price");
 
-                    b.Property<int>("Quantity");
-
-                    b.Property<int>("ServingSize");
+                    b.Property<string>("ServingSize");
 
                     b.HasKey("CateringProductId");
 
@@ -89,17 +87,18 @@ namespace BreadsBakery.Migrations
 
             modelBuilder.Entity("BreadsBakery.Models.Order", b =>
                 {
-                    b.Property<int>("CateringProductId");
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("CateringOrderId");
 
-                    b.Property<int?>("CateringOrderId1");
+                    b.Property<int>("CateringProductId");
 
                     b.Property<int>("Quantity");
 
-                    b.HasKey("CateringProductId", "CateringOrderId");
+                    b.HasKey("OrderId");
 
-                    b.HasIndex("CateringOrderId1");
+                    b.HasIndex("CateringOrderId");
 
                     b.HasIndex("CateringProductId");
 
@@ -137,7 +136,9 @@ namespace BreadsBakery.Migrations
 
                     b.Property<string>("CompanyName");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.HasKey("UserId");
 
@@ -164,7 +165,8 @@ namespace BreadsBakery.Migrations
                 {
                     b.HasOne("BreadsBakery.Models.CateringOrder", "CateringOrder")
                         .WithMany("Order")
-                        .HasForeignKey("CateringOrderId1");
+                        .HasForeignKey("CateringOrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BreadsBakery.Models.CateringProduct", "CateringProduct")
                         .WithMany("Order")

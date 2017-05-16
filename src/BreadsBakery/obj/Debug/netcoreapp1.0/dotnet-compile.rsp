@@ -213,12 +213,8 @@ c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsB
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Startup.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Controllers\CateringOrderController.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515173943_Initial.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515173943_Initial.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515182253_Prepopulate.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515182253_Prepopulate.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515213619_UpdateIt.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515213619_UpdateIt.Designer.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515223511_Initial.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170515223511_Initial.Designer.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\BreadsBakeryDbContextModelSnapshot.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\BreadsBakeryDbContext.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\CateringOrder.cs
