@@ -40,32 +40,33 @@ namespace BreadsBakery.Controllers
         public IActionResult PlaceOrder(int id)
         {
             var thisProduct = db.CateringOrders.FirstOrDefault(products => products.CateringOrderId == id);
+            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
             return View(thisProduct);
         }
 
 
         //public IActionResult PlaceOrder(int id)
         //{
-            //ViewBag.thisOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
-            //ViewBag.List = db.CateringProducts.ToList();
-            //ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
+        //ViewBag.thisOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
+        //ViewBag.List = db.CateringProducts.ToList();
+        //ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
 
-            //var thisCateringOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
+        //var thisCateringOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
 
-            //ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
+        //
         //    return View(thisCateringOrder);
 
         //}
 
-        //[HttpPost]
-        //public IActionResult PlaceOrder(Order order)
-        //{
+        [HttpPost]
+        public IActionResult PlaceOrder(Order order)
+        {
 
-        //    db.Orders.Add(order);
+            db.Orders.Add(order);
 
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index", "Home");
-        //}
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
 
 
     }

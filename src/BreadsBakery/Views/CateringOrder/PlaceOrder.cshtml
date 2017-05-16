@@ -10,3 +10,14 @@
 <p>
     @Html.DisplayFor(model => model.Address)
 </p>
+
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CateringOrderId)
+
+     <label>Product</label>
+    @Html.DropDownList("CateringProductId")
+
+    <input type="submit" value="Place Order" />
+}
