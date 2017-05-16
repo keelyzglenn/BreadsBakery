@@ -24,6 +24,8 @@ namespace BreadsBakery.Models
 
         public string Category { get; set; }
 
+        public bool AddToOrder { get; set; }
+
         public int DepartmentId { get; set; }
         public virtual Department Department { get; set; }
 

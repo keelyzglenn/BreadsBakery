@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model BreadsBakery.Models.CateringOrder
+
+
+<h2>Confirmation Number: @Html.DisplayFor(model => model.CateringOrderId)</h2>
+<h2>Date of event: @Html.DisplayFor(model => model.DateNeeded)</h2>
+<h2>Date order placed: @Html.DisplayFor(model => model.DateTaken)</h2>
+<h2>Time of Event: @Html.DisplayFor(model => model.Time)</h2>
+<h2>Delivery: @Html.DisplayFor(model => model.Delivery)</h2>
+<h2>Price: @Html.DisplayFor(model => model.Price)</h2>
+<h2>Event Size: @Html.DisplayFor(model => model.ServingRange)</h2>
+<h2>Payment method: @Html.DisplayFor(model => model.PaymentMethod)</h2>
+
+
+    @foreach (var order in Model.Order)
+    {
+
+        <p>@order.CateringProduct.Name</p>
+        <p>@order.Quantity</p>
+
+    }

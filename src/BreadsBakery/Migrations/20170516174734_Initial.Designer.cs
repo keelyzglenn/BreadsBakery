@@ -8,7 +8,7 @@ using BreadsBakery.Models;
 namespace BreadsBakery.Migrations
 {
     [DbContext(typeof(BreadsBakeryDbContext))]
-    [Migration("20170515223511_Initial")]
+    [Migration("20170516174734_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,8 @@ namespace BreadsBakery.Migrations
                 {
                     b.Property<int>("CateringProductId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("AddToOrder");
 
                     b.Property<string>("Category");
 

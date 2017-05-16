@@ -40,23 +40,13 @@ namespace BreadsBakery.Controllers
         public IActionResult PlaceOrder(int id)
         {
             var thisProduct = db.CateringOrders.FirstOrDefault(products => products.CateringOrderId == id);
-            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "CateringProductId");
+            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "Name");
+
+            ViewBag.List = db.CateringProducts.ToList();
+
             return View(thisProduct);
         }
 
-
-        //public IActionResult PlaceOrder(int id)
-        //{
-        //ViewBag.thisOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
-        //ViewBag.List = db.CateringProducts.ToList();
-        //ViewBag.CateringOrderId = new SelectList(db.CateringOrders, "CateringOrderId", "CateringOrderId");
-
-        //var thisCateringOrder = db.CateringOrders.FirstOrDefault(order => order.CateringOrderId == id);
-
-        //
-        //    return View(thisCateringOrder);
-
-        //}
 
         [HttpPost]
         public IActionResult PlaceOrder(Order order)
@@ -65,9 +55,19 @@ namespace BreadsBakery.Controllers
             db.Orders.Add(order);
 
             db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index");
         }
 
+        public IActionResult OrderConfirmation(int id)
+        {
+            var thisCateringOrder = db.CateringOrders.FirstOrDefault(cateringOrders => cateringOrders.CateringOrderId == id);
+            ViewBag.CateringProduct = db.CateringOrders
+                .Include(cateringOrder => cateringOrder.Order)
+                .ThenInclude(order => order.CateringProduct)
+                .Where(cateringOrder => cateringOrder.CateringOrderId == id).ToList();
+            return View(thisCateringOrder);
+
+        }
 
     }
 }

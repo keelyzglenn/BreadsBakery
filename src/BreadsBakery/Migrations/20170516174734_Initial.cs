@@ -43,6 +43,7 @@ namespace BreadsBakery.Migrations
                 {
                     CateringProductId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AddToOrder = table.Column<bool>(nullable: false),
                     Category = table.Column<string>(nullable: true),
                     DepartmentId = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),

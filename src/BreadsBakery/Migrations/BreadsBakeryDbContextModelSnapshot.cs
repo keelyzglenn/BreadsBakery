@@ -51,6 +51,8 @@ namespace BreadsBakery.Migrations
                     b.Property<int>("CateringProductId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<bool>("AddToOrder");
+
                     b.Property<string>("Category");
 
                     b.Property<int>("DepartmentId");

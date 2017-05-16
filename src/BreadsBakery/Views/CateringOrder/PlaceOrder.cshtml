@@ -7,17 +7,33 @@
 
 @model BreadsBakery.Models.CateringOrder
 
-<p>
+@*<p>
     @Html.DisplayFor(model => model.Address)
-</p>
+</p>*@
 
 
 @using (Html.BeginForm())
 {
+
+    @foreach (var product in ViewBag.List)
+    {
+                <div>
+                    <p>@product.Name</p>
+                </div>
+       
+
+    }
+
     @Html.HiddenFor(model => model.CateringOrderId)
+
+    @*<input type="hidden" name="CateringOrderId" value="(model => model.CateringOrderId)">*@
 
      <label>Product</label>
     @Html.DropDownList("CateringProductId")
+
+    <label>Quantity</label>
+    <input type="text" name="Quantity" />
+
 
     <input type="submit" value="Place Order" />
 }

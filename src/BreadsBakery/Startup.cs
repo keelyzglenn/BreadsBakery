@@ -136,7 +136,7 @@ namespace BreadsBakery
         var cateringProduct1 = new CateringProduct();
             cateringProduct1.Name = "Mini Sandwiches";
             cateringProduct1.Description = "Tuna Salad & Hard-Boiled Egg; Gouda & Vegetable; Freshly Made Egg Salad & Tomato; Smoked Salmon & Cream Cheese.";
-            cateringProduct1.ImageUrl = "Kitchen";
+            cateringProduct1.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/MiniSandwiches_12769.jpg";
             cateringProduct1.Price = 72;
             cateringProduct1.ServingSize = "16 Pieces";
             cateringProduct1.Category = "Breakfast";
@@ -146,7 +146,7 @@ namespace BreadsBakery
             var cateringProduct2 = new CateringProduct();
             cateringProduct2.Name = "Mini Pastry Assortment";
             cateringProduct2.Description = "Assortment of Croissant, Pain Au Chocolate, and Pain Au Raisin.";
-            cateringProduct2.ImageUrl = "Kitchen";
+            cateringProduct2.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/MiniPastryAssortment_12769.jpg";
             cateringProduct2.Price = 38;
             cateringProduct2.ServingSize = "15 Pieces";
             cateringProduct2.Category = "Breakfast";
@@ -156,7 +156,7 @@ namespace BreadsBakery
             var cateringProduct3 = new CateringProduct();
             cateringProduct3.Name = "Tuna and Vegetable Salad";
             cateringProduct3.Description = "Homemade Tuna Salad with Mixed Greens, Tomato, Cucumber, Red Onion, Hard Boiled Egg & Kalamata Olives.";
-            cateringProduct3.ImageUrl = "https://www.instagram.com/p/BStoJbylkx8/?hl=en";
+            cateringProduct3.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/TunaVegetableSalad_12770.jpg";
             cateringProduct3.Price = 39;
             cateringProduct3.ServingSize = "64 oz";
             cateringProduct3.Category = "Lunch";
@@ -166,7 +166,7 @@ namespace BreadsBakery
             var cateringProduct4 = new CateringProduct();
             cateringProduct4.Name = "Crudite Platter";
             cateringProduct4.Description = "Variety of Fresh, Seasonal Vegetables from The Union Square Greenmarket, Including Cherry Tomato, Cucumber, Carrot, Red Pepper, Baby Radish Served with A Sour Cream & Chive Dip. ";
-            cateringProduct4.ImageUrl = "https://www.instagram.com/p/BSeceYSlem5/?taken-by=breadsbakery&hl=en";
+            cateringProduct4.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/CruditePlatter_12770.jpg";
             cateringProduct4.Price = 44;
             cateringProduct4.ServingSize = "2.2 lbs";
             cateringProduct4.Category = "Lunch";
@@ -176,7 +176,7 @@ namespace BreadsBakery
             var cateringProduct5 = new CateringProduct();
             cateringProduct5.Name = "Cheese Straw Bites";
             cateringProduct5.Description = "A Bite Size Version of Our Famous Cheese Straws.";
-            cateringProduct5.ImageUrl = "https://www.instagram.com/p/BSJrRMmgJqD/?taken-by=breadsbakery&hl=en";
+            cateringProduct5.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/CheeseStrawBites_12766.jpg";
             cateringProduct5.Price = 38;
             cateringProduct5.ServingSize = "65 pieces";
             cateringProduct5.Category = "Appetizers";
@@ -186,7 +186,7 @@ namespace BreadsBakery
             var cateringProduct6 = new CateringProduct();
             cateringProduct6.Name = "Rugelach Platter";
             cateringProduct6.Description = "Delicious Chocolate Rugelach. ";
-            cateringProduct6.ImageUrl = "https://www.instagram.com/p/BSeceYSlem5/?taken-by=breadsbakery&hl=en";
+            cateringProduct6.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/RugelachPlatter_12768.jpg";
             cateringProduct6.Price = 41;
             cateringProduct6.ServingSize = "24 pieces";
             cateringProduct6.Category = "Desserts";
@@ -196,12 +196,107 @@ namespace BreadsBakery
             var cateringProduct7 = new CateringProduct();
             cateringProduct7.Name = "Danish Tartlet Platter";
             cateringProduct7.Description = "Marzipan, Crème Patisserie Filling and Fresh Seasonal Fruit.";
-            cateringProduct7.ImageUrl = "https://www.instagram.com/p/BSJrRMmgJqD/?taken-by=breadsbakery&hl=en";
+            cateringProduct7.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/DanishTartletPlatter_12768.jpg";
             cateringProduct7.Price = 71;
             cateringProduct7.ServingSize = "16 pieces";
             cateringProduct7.Category = "Desserts";
             cateringProduct7.DepartmentId = department2.DepartmentId;
             context.CateringProducts.Add(cateringProduct7);
+
+
+
+
+      
+            var cateringProduct8 = new CateringProduct();
+            cateringProduct8.Name = "Croissant Sandwiches";
+            cateringProduct8.Description = "Atlantic Smoked Salmon; Gouda & Vegetable; Brie & Olive";
+            cateringProduct8.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/CroissantSandwiches_12769.jpg";
+            cateringProduct8.Price = 65;
+            cateringProduct8.ServingSize = "12 Pieces";
+            cateringProduct8.Category = "Breakfast";
+            cateringProduct8.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct8);
+
+            var cateringProduct9 = new CateringProduct();
+            cateringProduct9.Name = "Mini Burekas";
+            cateringProduct9.Description = "Cheese - Feta, Cream Cheese & Sour Cream, Spinach & Cheese - Feta, Spinach, Cream Cheese & Onion, Potato - Potato, Parsley, Salt & Pepper.";
+            cateringProduct9.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/MiniBurekas_12769.jpg";
+            cateringProduct9.Price = 30;
+            cateringProduct9.ServingSize = "30 Pieces";
+            cateringProduct9.Category = "Breakfast";
+            cateringProduct9.DepartmentId = department3.DepartmentId;
+            context.CateringProducts.Add(cateringProduct9);
+
+            var cateringProduct10 = new CateringProduct();
+            cateringProduct10.Name = "Mini Quiche Assortment";
+            cateringProduct10.Description = "Mediterranean - Eggplant, Roasted Pepper, Goat Cheese - Goat Cheese, Onion, Gouda, Onion & Leek - Caramelized Onion & Lee, Mushroom - Mushroom, Onion & Gouda. ";
+            cateringProduct10.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/MiniQuicheAssortment_12769.jpg";
+            cateringProduct10.Price = 60;
+            cateringProduct10.ServingSize = "20 Pieces";
+            cateringProduct10.Category = "Breakfast";
+            cateringProduct10.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct10);
+
+            var cateringProduct11 = new CateringProduct();
+            cateringProduct11.Name = "Beet & Lentil Salad";
+            cateringProduct11.Description = "Lentil and Roasted Beet Salad with Feta Cheese and A Dijon Vinaigrette";
+            cateringProduct11.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/BeetLentilSalad_12770.jpg";
+            cateringProduct11.Price = 39;
+            cateringProduct11.ServingSize = "64 oz.";
+            cateringProduct11.Category = "Lunch";
+            cateringProduct11.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct11);
+
+            var cateringProduct12 = new CateringProduct();
+            cateringProduct12.Name = "Avocado Salad Cups";
+            cateringProduct12.Description = " Layers of Avocado, Tomato, Goat Cheese and Cream Cheese";
+            cateringProduct12.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/AvocadoSaladCups_12766.jpg";
+            cateringProduct12.Price = 40;
+            cateringProduct12.ServingSize = "12 Pieces";
+            cateringProduct12.Category = "Appetizers";
+            cateringProduct12.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct12);
+
+            var cateringProduct13 = new CateringProduct();
+            cateringProduct13.Name = "Salmon Crostini";
+            cateringProduct13.Description = "Toasted Baguette Topped with Cream Cheese and Atlantic Smoked Salmon, Topped with A Caper and Chive Garnish";
+            cateringProduct13.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/SalmonCrostini_12766.jpg";
+            cateringProduct13.Price = 49;
+            cateringProduct13.ServingSize = "14 Pieces";
+            cateringProduct13.Category = "Appetizers";
+            cateringProduct13.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct13);
+
+            var cateringProduct14 = new CateringProduct();
+            cateringProduct14.Name = "Cheese Platter";
+            cateringProduct14.Description = " Gouda, Feta, Brie and Blue Cheese Garnished with Fresh Seasonal Fruit (Recommended to Accompany Our Bread Basket).";
+            cateringProduct14.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/CheesePlatter_12767.jpg";
+            cateringProduct14.Price = 66;
+            cateringProduct14.ServingSize = "2.2 lbs.";
+            cateringProduct14.Category = "Appetizers";
+            cateringProduct14.DepartmentId = department1.DepartmentId;
+            context.CateringProducts.Add(cateringProduct14);
+
+
+            var cateringProduct15 = new CateringProduct();
+            cateringProduct15.Name = "Chocolate Truffles";
+            cateringProduct15.Description = "Premium Belgian Chocolate Rolled in Pure Cocoa Powder";
+            cateringProduct15.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/CheesePlatter_12767.jpg";
+            cateringProduct15.Price = 49;
+            cateringProduct15.ServingSize = "1.1 lbs.";
+            cateringProduct15.Category = "Desserts";
+            cateringProduct15.DepartmentId = department2.DepartmentId;
+            context.CateringProducts.Add(cateringProduct15);
+
+            var cateringProduct17 = new CateringProduct();
+            cateringProduct17.Name = "Mini Feuille";
+            cateringProduct17.Description = "Caramelized Puff Pastry Squares with A Delicate Crème Patisserie Filling";
+            cateringProduct17.ImageUrl = "https://orders.9fold.me/RestaurantsData/Menus/Items/MiniFeuille_12768.jpg";
+            cateringProduct17.Price = 52;
+            cateringProduct17.ServingSize = "25 Pieces";
+            cateringProduct17.Category = "Desserts";
+            cateringProduct17.DepartmentId = department2.DepartmentId;
+            context.CateringProducts.Add(cateringProduct17);
 
 
 
