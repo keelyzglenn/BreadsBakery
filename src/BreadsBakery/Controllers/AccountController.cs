@@ -12,6 +12,8 @@ namespace BreadsBakery.Controllers
 {
     public class AccountController : Controller
     {
+        private BreadsBakeryDbContext db = new BreadsBakeryDbContext();
+
         private readonly BreadsBakeryDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -23,9 +25,18 @@ namespace BreadsBakery.Controllers
             _db = db;
         }
 
+
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                var thisUser = db.Users.FirstOrDefault(item => item.UserName == User.Identity.Name);
+                return View(thisUser);
+            }
+            else
+            {
+                return View();
+            }
         }
 
 
@@ -48,8 +59,6 @@ namespace BreadsBakery.Controllers
                 return View();
             }
         }
-
-
 
         public IActionResult Login()
         {

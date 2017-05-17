@@ -14,7 +14,7 @@ namespace BreadsBakery.Controllers
         private BreadsBakeryDbContext db = new BreadsBakeryDbContext();
         public IActionResult Index()
         {
-            return View(db.CateringOrders.ToList());
+            return View(db.CateringOrders.Include(i => i.User).ToList());
         }
 
         public IActionResult CateringMenu()
@@ -25,13 +25,14 @@ namespace BreadsBakery.Controllers
         public IActionResult Create()
         {
             //ViewBag.PostId = new SelectList(_db.Posts, "Id", "Description");
-            ViewBag.UserId = new SelectList(db.Users, "UserId", "FirstName");
+            //ViewBag.UserId = new SelectList(db.Users, "UserId", "FirstName");
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(CateringOrder cateringOrder)
         {
+            cateringOrder.User = db.Users.FirstOrDefault(i => i.UserName == User.Identity.Name);
             db.CateringOrders.Add(cateringOrder);
             db.SaveChanges();
             return RedirectToAction("Index");

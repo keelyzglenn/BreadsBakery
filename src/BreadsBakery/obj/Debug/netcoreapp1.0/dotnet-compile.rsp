@@ -214,13 +214,7 @@ C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Startup.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\AccountController.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\CateringOrderController.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.Designer.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517183240_UpdateAgain.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517183240_UpdateAgain.Designer.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517184341_Identity.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517184341_Identity.Designer.cs
-C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\BreadsBakeryDbContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\UserController.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\ApplicationUser.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\BreadsBakeryDbContext.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\CateringOrder.cs

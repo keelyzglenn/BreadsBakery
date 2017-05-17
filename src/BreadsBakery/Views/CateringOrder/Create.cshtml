@@ -15,15 +15,18 @@
     </div>
 
     <div>
+        <label> Todays Date:</label>
+
+        @Html.EditorFor(model => model.DateNeeded, new { @type = "date", @class = "form-control" })
+    </div>
+
+    <div>
         <label>Time:</label>
 
         @Html.TextBoxFor(model => model.Time)
     </div>
 
-    <div>
-        <label> Todays Date:</label>
-        @Html.TextBoxFor(model => model.DateTaken)
-    </div>
+
 
     <div>
         <label>Address</label>
@@ -52,9 +55,6 @@
         @Html.RadioButtonFor(model => model.PaymentMethod, "Cash", "Cash")
         @Html.RadioButtonFor(model => model.PaymentMethod, "Card", "Card")
     </div>
-
-    <label>User</label>
-    @Html.DropDownList("UserId")
 
 
     <input type="submit" value="Place Order" />
