@@ -7,6 +7,20 @@
 
 
 <h1>Catering Menu</h1>
+@if (User.Identity.IsAuthenticated)
+{
+    @Html.ActionLink("Place Order", "Create", "CateringOrder") 
+}
+
+@if (!User.Identity.IsAuthenticated)
+{
+    @Html.ActionLink("Log In or Register To Place an Order", "Index", "Account")
+}
+
+
+
+
+
 
 <br />
 <h3 class="catering-menu-title">Breakfast</h3>

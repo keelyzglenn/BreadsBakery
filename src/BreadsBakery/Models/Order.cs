@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BreadsBakery.ViewModels;
 
 namespace BreadsBakery.Models
 {
@@ -19,5 +20,18 @@ namespace BreadsBakery.Models
         public virtual CateringProduct CateringProduct { get; set; }
 
         public int Quantity { get; set; }
+
+        public static Order CreateOrder(PlaceOrderViewModel vm)
+        {
+            Order newOrder = new Order
+            {
+                CateringOrderId = vm.CateringOrderId,
+                Quantity = vm.Quantity,
+                CateringProductId = vm.CateringProductId,
+
+            };
+
+            return newOrder;
+        }
     }
 }

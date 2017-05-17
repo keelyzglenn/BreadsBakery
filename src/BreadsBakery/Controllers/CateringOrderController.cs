@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using BreadsBakery.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using BreadsBakery.ViewModels;
 
 namespace BreadsBakery.Controllers
 {
@@ -41,20 +42,21 @@ namespace BreadsBakery.Controllers
         public IActionResult PlaceOrder(int id)
         {
             var thisProduct = db.CateringOrders.FirstOrDefault(products => products.CateringOrderId == id);
-            ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "Name");
+            //var List = db.CateringProducts.ToList();
+            //ViewBag.CateringProductId = new SelectList(db.CateringProducts, "CateringProductId", "Name");
 
-            ViewBag.List = db.CateringProducts.ToList();
-
-            return View(thisProduct);
+            PlaceOrderViewModel vm = new PlaceOrderViewModel();
+            vm.CateringOrderId = thisProduct.CateringOrderId;
+            vm.CateringProduct = db.CateringProducts.ToList();
+            return View(vm);
         }
 
 
         [HttpPost]
-        public IActionResult PlaceOrder(Order order)
+        public IActionResult PlaceOrder(PlaceOrderViewModel vm)
         {
-
-            db.Orders.Add(order);
-
+            Order newOrder = Order.CreateOrder(vm);
+            db.Orders.Add(newOrder);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -5,43 +5,30 @@
 }
 
 
-@model BreadsBakery.Models.CateringOrder
+@model BreadsBakery.ViewModels.PlaceOrderViewModel
 
-@*<p>
-    @Html.DisplayFor(model => model.Address)
-</p>*@
 
 
 @using (Html.BeginForm())
 {
+   
 
-    @foreach (var product in ViewBag.List)
-    {
-                <div>
-                    <p>@product.Name</p>
+    @Html.HiddenFor(model => model.CateringOrderId)
+
+        <div class="checkbox" name="CateringProductId">
+            @foreach (var product in @Model.CateringProduct)
+            {
+                <div class="form-group">
+
+                <label>@product.Name</label>
+                @Html.RadioButtonFor(model => model.CateringProductId, @product.CateringProductId)
                 </div>
-       
-
-    }
-
-    @Html.HiddenFor(model => model.CateringOrderId)
-
-     <label>Product</label>
-    @Html.DropDownList("CateringProductId")
-
-    <label>Quantity</label>
-    <input type="text" name="Quantity" />
-
-
-
-    @Html.HiddenFor(model => model.CateringOrderId)
-
-
-    <label>Product</label>
-    @Html.DropDownList("CateringProductId")
-
-    <label>Quantity</label>
-    <input type="text" name="Quantity" />
+            }
+        </div>
+  
+   
+        <lable>Quantity</lable>
+        @Html.TextBoxFor(m => m.Quantity, new {  required = "required" })
 
 
     <input type="submit" value="Place Order" />
