@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BreadsBakery.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 namespace BreadsBakery.Models
 {
-    public class BreadsBakeryDbContext : DbContext
+    public class BreadsBakeryDbContext : IdentityDbContext<ApplicationUser>
     {
         public virtual DbSet<StoreProduct> StoreProducts { get; set; }
         public virtual DbSet<Department> Departments { get; set; }

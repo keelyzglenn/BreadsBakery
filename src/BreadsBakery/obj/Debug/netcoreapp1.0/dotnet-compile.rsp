@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\bin\Debug\netcoreapp1.0\BreadsBakery.dll
+--temp-output:C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\bin\Debug\netcoreapp1.0\BreadsBakery.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -208,18 +208,26 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
---resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\obj\Debug\netcoreapp1.0\BreadsBakerydotnet-compile.deps.json",BreadsBakery.deps.json
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Program.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Controllers\CateringOrderController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Migrations\BreadsBakeryDbContextModelSnapshot.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\BreadsBakeryDbContext.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\CateringOrder.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\CateringProduct.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\Department.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\Order.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\StoreProduct.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BreadsBakery\src\BreadsBakery\Models\User.cs
+--resource:"C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\obj\Debug\netcoreapp1.0\BreadsBakerydotnet-compile.deps.json",BreadsBakery.deps.json
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Program.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Startup.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\AccountController.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\CateringOrderController.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170516174734_Initial.Designer.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517183240_UpdateAgain.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517183240_UpdateAgain.Designer.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517184341_Identity.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517184341_Identity.Designer.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\BreadsBakeryDbContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\ApplicationUser.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\BreadsBakeryDbContext.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\CateringOrder.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\CateringProduct.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\Department.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\Order.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\StoreProduct.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\User.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\ViewModels\RegisterViewModel.cs

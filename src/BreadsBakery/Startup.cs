@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using BreadsBakery.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 
 namespace BreadsBakery
@@ -28,6 +29,9 @@ namespace BreadsBakery
             services.AddEntityFramework()
                .AddDbContext<BreadsBakeryDbContext>(options =>
                    options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+             .AddEntityFrameworkStores<BreadsBakeryDbContext>()
+             .AddDefaultTokenProviders();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
@@ -35,6 +39,7 @@ namespace BreadsBakery
             var context = app.ApplicationServices.GetService<BreadsBakeryDbContext>();
             AddTestData(context);
 
+            app.UseIdentity();
             app.UseStaticFiles();
             loggerFactory.AddConsole();
             if (env.IsDevelopment())
