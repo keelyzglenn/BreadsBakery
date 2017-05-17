@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@model BreadsBakery.Models.User
 
 @if (User.Identity.IsAuthenticated)
 {
@@ -10,14 +11,11 @@
 
     <div>
         <h4>Hello Worker @Model.FirstName @Model.LastName. You are Logged In</h4>
-        <h3>Your Current Jobs:</h3>
-        @foreach (var order in Model.CateringOrder)
+        <h3>Your Current Orders:</h3>
+        @foreach (var order in @Model.CateringOrders)
         {
             <h5>@order.Address</h5>
 
         }
-       else {
-        <p>No orders</p>
-       }
     </div>
 }

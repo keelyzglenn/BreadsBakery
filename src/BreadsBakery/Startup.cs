@@ -64,7 +64,7 @@ namespace BreadsBakery
             context.Database.ExecuteSqlCommand("Delete From CateringProducts");
             context.Database.ExecuteSqlCommand("Delete From StoreProducts");
             context.Database.ExecuteSqlCommand("Delete From Departments");
-            context.Database.ExecuteSqlCommand("Delete From Users");
+            //context.Database.ExecuteSqlCommand("Delete From Users");
 
             //Add deparments to database
 
@@ -323,11 +323,11 @@ namespace BreadsBakery
 
 
 
-            var user1 = new User( );
-            user1.FirstName = "Keely";
-            user1.LastName = "Glenn";
-            user1.CompanyName = "Epicodus";
-            context.Users.Add(user1);
+            //var user1 = new User( );
+            //user1.FirstName = "Keely";
+            //user1.LastName = "Glenn";
+            //user1.CompanyName = "Epicodus";
+            //context.Users.Add(user1);
 
             context.SaveChanges();
         }

@@ -215,6 +215,9 @@ C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\AccountContr
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\CateringOrderController.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\HomeController.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Controllers\UserController.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517205053_Initial.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\20170517205053_Initial.Designer.cs
+C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Migrations\BreadsBakeryDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\ApplicationUser.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\BreadsBakeryDbContext.cs
 C:\Users\epicodus\Desktop\BreadsBakery\src\BreadsBakery\Models\CateringOrder.cs
